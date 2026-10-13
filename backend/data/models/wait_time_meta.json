@@ -1,0 +1,14 @@
+{
+  "model": "GradientBoostingRegressor",
+  "trained_on": "real ER Wait Time dataset",
+  "n_samples": 5000,
+  "mae_min": 19.68,
+  "r2": 0.798,
+  "features": [
+    "nurse_patient_ratio",
+    "er_occupancy",
+    "specialist_availability",
+    "urgency",
+    "shift"
+  ]
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-ink-800 text-slate-200 font-sans antialiased;
+  background-image: radial-gradient(circle at 15% 0%, rgba(212, 242, 58, 0.05), transparent 40%),
+    radial-gradient(circle at 85% 100%, rgba(92, 168, 255, 0.04), transparent 40%);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-ink-600/80 border border-ink-400/60 rounded-xl2 shadow-card backdrop-blur-sm;
+  }
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-ink-400/70 bg-ink-700/80 px-3 py-1.5 text-xs font-medium;
+  }
+  .rail-btn {
+    @apply flex h-11 w-11 items-center justify-center rounded-xl text-muted transition-all duration-200
+           hover:text-lime hover:bg-ink-600 cursor-pointer;
+  }
+  .rail-btn-active {
+    @apply text-ink-900 bg-lime hover:bg-lime hover:text-ink-900 shadow-glow;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(120,130,150,0.35); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(120,130,150,0.6); }
